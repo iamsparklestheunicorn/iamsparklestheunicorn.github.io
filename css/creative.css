@@ -178,13 +178,11 @@ header {
     min-height: auto;
     text-align: center;
     color: #FFC0CB;
-    background-image: url(/img/header.jpg);
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    opacity: 1;
+
+
 }
+
 
 header .header-content {
     position: relative;
@@ -199,6 +197,23 @@ header .header-content .header-content-inner h1 {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 50px;
+}
+
+header::after{
+  content: "";
+  background: url(/img/header.jpg);
+  opacity: 0.5;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 header .header-content .header-content-inner hr {
