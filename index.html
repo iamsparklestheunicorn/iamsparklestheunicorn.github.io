@@ -2,24 +2,26 @@
 layout: default
 title: Home Page
 ---
-<header>
-	<div class="header-content">
-		<div class="header-content-inner">
-			<h1>Your favorite unicorn is here!</h1>
-			<hr>
-			<p>Sparkles is on a mission! Stay tuned for the site's remodel!</p>
-			<a href="/about.html" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
-			<embed src="/Users/dinaholzapfel/Documents/Sparkles/iamsparklestheunicorn.github.io/music/Murat.mp3" autostart="true" loop="true"
-width="2" height="0">
-</embed>
+<section class="no-padding" id="portfolio">
+	<div class="container-fluid">
+		<div class="row no-gutter">
+			{% for portfolio_item in site.portfolio %}
+				<div class="col-lg-4 col-sm-6">
+					<a href="{{ portfolio_item.link }}" class="portfolio-box">
+						<img src="{{ portfolio_item.image_path }}" class="img-responsive img-handler" alt="">
+						<div class="portfolio-box-caption">
+							<div class="portfolio-box-caption-content">
+								<div class="project-category text-faded">
+									{{ portfolio_item.category }}
+								</div>
+								<div class="project-name">
+									{{ portfolio_item.project_name }}
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			{% endfor %}
 		</div>
 	</div>
-</header>
-<aside class="bg-dark">
-	<div class="container text-center">
-		<div class="call-to-action">
-			<h2>In the mean time, stay tuned on the Gram!</h2>
-			<a href="http://www.instagram.com/iamsparklestheunicorn" class="btn btn-default btn-xl wow tada" target="_blank">Check it out!</a>
-		</div>
-	</div>
-</aside>
+</section>

@@ -8,6 +8,8 @@ html,
 body {
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -66,6 +68,7 @@ p {
 
 section {
     padding: 100px 0;
+    height: 100%;
 }
 
 aside {
@@ -279,6 +282,65 @@ header .header-content .header-content-inner p {
     position: relative;
     margin: 0 auto;
     max-width: 650px;
+}
+
+.imgfull-box {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  padding: 0;
+  border: 0;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; }
+
+.imgfull-box .imgfull-box-caption {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  background: rgba(216,57,108,.5);
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+  padding: 0 15px;
+  font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+  font-size: 18px;
+}
+
+.imgfull-box .imgfull-box-caption .imgfull-box-caption-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.imgfull-box:hover .imgfull-box-caption {
+    opacity: 1;
+}
+
+@media(min-width:768px) {
+    .imgfull-box .imgfull-box-caption .imgfull-box-caption-content .project-name {
+        font-size: 22px; }
+}
+
+
+.img-handler {
+  width: 650px;
+  height: 350px;
+  overflow: hidden;
 }
 
 .portfolio-box .portfolio-box-caption {

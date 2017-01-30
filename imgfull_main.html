@@ -1,0 +1,28 @@
+---
+layout: imgfull_lay
+---
+
+<div id="imgfull">
+<!--	<div class="container-fluid" height="100%" width="100%">
+		<div class="row" height="100%" width="100%"> -->
+			{% for portfolio_item in site.portfolio %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+					<div id="{{ portfolio_item.number }}" class="imgfull-box">
+						<a name="{{ portfolio_item.number }}"></a>
+						<img src="{{ portfolio_item.image_path }}" class="img-responsive imgfull-box" alt="">
+						<div class="imgfull-box-caption">
+							<div class="imgfull-box-caption-content">
+
+								<div class="project-name">
+									{{ portfolio_item.project_name }} (Placeholder)
+								</div>
+							</div>
+						</div>
+					</div>
+			{% endfor %}
+<!--		</div>
+</div> -->
+</div>
+
+<script src="/js/layout.js"></script>
