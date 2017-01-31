@@ -8,8 +8,8 @@ layout: imgfull_lay
 			{% for portfolio_item in site.portfolio %}
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-					<div id="{{ portfolio_item.number }}" class="imgfull-box">
-						<a name="{{ portfolio_item.number }}"></a>
+					<div id="page{{ portfolio_item.number }}" class="imgfull-box">
+						<a href="#{{portfolio_item.number}}" name="{{ portfolio_item.number }}"></a>
 						<img src="{{ portfolio_item.image_path }}" class="img-responsive imgfull-box" alt="">
 						<div class="imgfull-box-caption">
 							<div class="imgfull-box-caption-content">
